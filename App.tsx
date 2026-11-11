@@ -1,14 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StyleSheet, Text, View, Pressable, Modal } from 'react-native';
 
 import { useState } from 'react';
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
-    <View style={styles.container}>
-      <Text>Show Modal message</Text>
-      <StatusBar style="auto" />
+      <View style={styles.container}>
+     <Pressable onPress={() => setModalVisible(true)}>
+    <Text>Show Modal message</Text>
+          </Pressable>
+    <Modal visible={modalVisible}>
+    <View>
+    <Text>This is Modal...</Text>
+    
+    </View>
+    </Modal>
+
     </View>
   );
 }
