@@ -14,6 +14,10 @@ const App = () => {
     <View>
     <Text>This is Modal...</Text>
     
+    <Pressable onPress={() => setModalVisible(false)}>
+    <Text>Close</Text>
+    </Pressable>
+    
     </View>
     </Modal>
 
